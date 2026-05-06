@@ -1,0 +1,7 @@
+name,demand,capacity,latency,risk,weight,score,decision,reason
+baseline,58,90,15,10,6,132,review,graphics baseline scenario exercises the review path for bounded failure handling
+pressure,85,73,25,18,9,107,review,graphics pressure scenario exercises the review path for bounded failure handling
+surge,108,92,18,12,13,254,accept,graphics surge scenario keeps the local fixture within the modeled acceptance band
+degraded,64,61,31,26,7,-23,review,graphics degraded scenario exercises the review path for bounded failure handling
+recovery,89,106,21,13,12,207,accept,graphics recovery scenario keeps the local fixture within the modeled acceptance band
+boundary,70,85,26,18,10,91,review,graphics boundary scenario exercises the review path for bounded failure handling
