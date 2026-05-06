@@ -1,0 +1,73 @@
+{
+  "repo": "boardgl",
+  "language": "TypeScript",
+  "category": "Graphics",
+  "goal": "Map FEN positions to board coordinates and legal-square overlays.",
+  "review_model": {
+    "terms": [
+      "geometry span",
+      "atlas pressure",
+      "shader drift",
+      "render budget"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "geometry span",
+      "signal": 62,
+      "slack": 40,
+      "drag": 15,
+      "confidence": 65,
+      "score": 184,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "atlas pressure",
+      "signal": 61,
+      "slack": 30,
+      "drag": 23,
+      "confidence": 87,
+      "score": 170,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "shader drift",
+      "signal": 84,
+      "slack": 49,
+      "drag": 31,
+      "confidence": 93,
+      "score": 217,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "render budget",
+      "signal": 64,
+      "slack": 37,
+      "drag": 25,
+      "confidence": 82,
+      "score": 172,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "geometry span",
+      "signal": 64,
+      "slack": 40,
+      "drag": 10,
+      "confidence": 79,
+      "score": 217,
+      "lane": "ship"
+    }
+  ]
+}
